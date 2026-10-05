@@ -128,7 +128,9 @@ Metrics in `results/metrics.json` are computed from these CSVs. Recompute them w
 
 ## Dataset
 
-NYC TLC Yellow Taxi Trip Records, January through April 2024, from the [TLC trip record data page](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page). The files are NYC Open Data: public, with no restrictions named on that page. `python run.py` downloads the parquet files from the TLC cloudfront bucket, caches them under `data/`, and checks a SHA-256 and a row count stored in `src/ride_pricing/config.py`.
+NYC TLC Yellow Taxi Trip Records, January through April 2024, from the [TLC trip record data page](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+
+License: NYC Open Data. These yellow-taxi trip records are public city data published by the NYC Taxi and Limousine Commission. The trip-record page does not name a separate software license, a fee, or a restriction on reuse. `python run.py` downloads the parquet files from the TLC CloudFront bucket, caches them under `data/`, and checks a SHA-256 and a row count stored in `src/ride_pricing/config.py`.
 
 ## Limitations
 
