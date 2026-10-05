@@ -1,0 +1,17 @@
+.venv/
+venv/
+data/
+__pycache__/
+.pytest_cache/
+.cursor/
+mlruns/
+*.pyc
+*.pyo
+*.pkl
+*.joblib
+*.lgb
+*.part
+.coverage
+htmlcov/
+.mypy_cache/
+*.egg-info/
