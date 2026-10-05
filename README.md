@@ -91,8 +91,8 @@ The switchback design assigns treatment to whole time blocks. Every unit in a bl
 | Switchback absolute bias | 0.011451 |
 | Naive user-level absolute bias | 4.796915 |
 | Bias ratio (switchback / naive) | 0.002387 |
-| Runtime seconds | 5.15 |
-| Peak RSS GiB | 0.4308 |
+| Runtime seconds | 5.92 |
+| Peak RSS GiB | 0.4303 |
 
 Values are fractions (0.25 means 25%), except prices in USD, trip totals, seconds, and GiB.
 This table is written by `python run.py` from `results/metrics.json`.
