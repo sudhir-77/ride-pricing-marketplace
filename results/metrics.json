@@ -1,0 +1,114 @@
+{
+  "project": "ride-pricing-marketplace",
+  "success_criteria": [
+    {
+      "name": "April zone-hour demand WAPE (top 50 zones)",
+      "value": 0.14612673860775385,
+      "op": "<=",
+      "threshold": 0.25,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "April zone-hour demand WAPE (top 50 zones) improvement vs seasonal-naive",
+      "value": 0.24273306390754443,
+      "op": ">=",
+      "threshold": 0.15,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Completed trips under optimized surge vs. flat pricing",
+      "value": 0.21309416610259224,
+      "op": ">=",
+      "threshold": 0.05,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Average rider price under optimized surge vs flat pricing",
+      "value": 18.755521200521038,
+      "op": "<=",
+      "threshold": 20.000000000000004,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Switchback analysis 95% CI coverage of the true effect",
+      "value": 0.942,
+      "op": ">=",
+      "threshold": 0.92,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Switchback bias vs one third of naive user-level A/B bias",
+      "value": 0.011451099797499031,
+      "op": "<",
+      "threshold": 1.598971516077846,
+      "threshold_high": null,
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "forecast": {
+      "april_top50_wape_lightgbm": 0.14612673860775385,
+      "april_top50_wape_seasonal_naive": 0.19296595644565825,
+      "wape_improvement_vs_naive": 0.24273306390754443,
+      "val_wape_lightgbm": 0.14744705686606388,
+      "val_wape_seasonal_naive": 0.18527970979495112,
+      "n_top_zones": 50,
+      "best_iteration": 150
+    },
+    "simulator": {
+      "completed_trips_optimized": 3510636.0811371445,
+      "completed_trips_flat": 2893951.8293258757,
+      "trips_lift": 0.21309416610259224,
+      "avg_rider_price_optimized": 18.755521200521038,
+      "avg_rider_price_flat": 20.000000000000004,
+      "mean_multiplier": 0.9377760600260516,
+      "rider_elasticity": -0.5,
+      "supply_elasticity": 1.0,
+      "base_fare_usd": 20.0,
+      "peak_supply_ratio": 0.62,
+      "offpeak_supply_ratio": 1.55
+    },
+    "switchback": {
+      "ci_coverage": 0.942,
+      "n_experiments": 500,
+      "n_blocks": 96,
+      "n_units_per_block": 8,
+      "true_effect": 1.8050407442790166,
+      "mean_estimate": 1.7935896444815176,
+      "switchback_bias": 0.011451099797499031,
+      "naive_ab_bias": 4.796914548233538,
+      "bias_ratio": 0.0023871802764791577,
+      "treatment_multiplier": 0.85
+    }
+  },
+  "baseline": {
+    "april_top50_wape_seasonal_naive": 0.19296595644565825,
+    "completed_trips_flat": 2893951.8293258757,
+    "avg_rider_price_flat": 20.000000000000004,
+    "flat_multiplier": 1.0
+  },
+  "splits": {
+    "zone_hour_panel": {
+      "train": 305760,
+      "val": 87360,
+      "test": 187200
+    }
+  },
+  "seeds": [
+    0
+  ],
+  "hardware": {
+    "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "ram_gb": 15.73,
+    "gpu": null,
+    "python": "3.12.10",
+    "os": "Windows-11-10.0.26200-SP0",
+    "peak_rss_gb": 0.4308
+  },
+  "runtime_seconds": 5.15
+}
